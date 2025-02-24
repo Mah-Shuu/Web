@@ -1,0 +1,155 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url("9K88rSo70V7I5CKtOZEu4riA.avif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Andy Bold V2";
+}
+
+@keyframes anime-in{
+    from {scale: 1;}
+    to {scale: 1.05;}
+}
+
+@keyframes anime-out{
+    from {scale: 1.05;}
+    to {scale: 1;}
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: rgb(42, 55, 66);
+    height: 100vh;
+    position: fixed;
+}
+
+.titulo{
+    color: bisque;
+    display: flex;
+    justify-content: center;
+}
+
+.opt{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    gap: 20px;
+}
+
+.opt a{
+    text-decoration: none;
+    color: rgb(146,146,146);
+    animation-name: anime-out;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+}
+
+.opt a:hover{
+    color: rgb(255,215,0);
+    animation-name: anime-in;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+}
+
+.menuIcon{
+    display: none;
+    color: bisque;
+}
+
+.page{
+    margin-left: 275px;
+    margin-right: 25px;
+    width: 100%;
+    color:bisque;
+    
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid gray ;
+    margin-bottom: 25px;
+}
+
+th{
+    padding: 10px;
+    background-color: rgb(75, 75, 75);
+    font-size: 22px;
+}
+
+td{
+    padding-left: 10px;
+    border: 2px solid gray;
+    background-color: rgba(44, 44, 44, 0.7);
+    font-size: 20px;
+    
+}
+
+.imagem{
+    padding: 10px;
+    width: 150px;  
+}
+
+tr img{
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+}
+
+@media(max-width: 480px){
+
+    
+    .sidebar{
+        flex-direction: row;
+        justify-content: space-between;
+        height: min-content;
+        width: 100vw;
+        position: none;
+    }
+
+    .opt a{
+        display: none;
+        margin-right: 20px;
+    }
+
+    .menuIcon{
+        display: block;
+        font-size: 30px;
+    
+    }
+
+    .titulo{
+        margin-left: 10px;
+    }
+
+
+    .opt{
+        gap: 0;
+        margin-left: 0;
+        margin-right: 10px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .page{
+        margin-top: 80px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .imagem{
+        width: 90px;
+        padding: 5px;
+    }
+
+    tr img{
+        width: 90px;
+        height: 90px;
+    }
+
+    
+}

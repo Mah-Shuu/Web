@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes anime-in{
+    from {scale: 1; filter: drop-shadow(0);}
+    to {scale: 1.05; filter: drop-shadow(0px 0px 10px red);}
+}
+
+@keyframes anime-out{
+    from {scale: 1.05; filter: drop-shadow(0px 0px 10px red);}
+    to {scale: 1; filter: drop-shadow(0);}
+}
+
+body{
+    font-family: "Afacad Flux", sans-serif;
+}
+
+:root{
+    --background: white;
+    --text-color: black;
+}
+
+.darkMode{
+    --background: black;
+    --text-color: white;
+}
+
+header{
+
+    background-image: url(https://st2.depositphotos.com/1028911/9369/i/450/depositphotos_93699184-stock-photo-connected-red-lego-blocks-abstract.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.logo{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    filter: drop-shadow(3px 3px 3px black);
+}
+
+.logo h1{
+    color: white;
+    font-size: 40px;
+    -webkit-text-stroke: 1.2px black;
+}
+
+.opt{
+    display: flex;
+    gap: 20px;
+    filter: drop-shadow(3px 3px 3px black);
+}
+
+.opt a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    
+}
+
+.menuIcon{
+    font-size: 40px;
+    display: none;
+    color: white;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page h1{
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: aliceblue;
+    margin-left: 96px;
+    margin-right: 96px;
+    padding: 30px;
+}
+
+button{
+    width: max-content;
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.jogo{
+    background-color: aliceblue;
+    width: 500px;
+    animation-name: anime-out;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+}
+
+.jogo img{
+    
+    object-fit: cover;
+    width: 500px;
+    height: 280px;
+}
+
+.jogo:hover{
+    animation-name: anime-in;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 672px;
+    background-color: aliceblue;
+    padding: 30px;
+    gap: 10px;
+}
+
+footer{
+    margin-top: 150px;
+    width: 100%;
+    height: 300px;
+    background-color: aliceblue;
+}
+
+button{
+    border-radius: 100px;
+    font-size: 16px;
+    font-family: "Afacad Flux", sans-serif;
+    background-color: rgb(255, 71, 71);
+    color: white;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button:hover{
+    background-color: rgb(255, 126, 126);
+}
+
+input[type=button]{
+    border-radius: 100px;
+    font-size: 16px;
+    font-family: "Afacad Flux", sans-serif;
+    background-color: rgb(255, 71, 71);
+    color: white;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+@media(max-width: 480px){
+    body{
+        width: 100%;
+    }
+    .menuIcon{
+        display: block;
+    }
+
+    .opt a{
+        display: none;
+    }
+
+    .logo img{
+        width: 50px;
+    }
+
+    .jogo{
+        width: 90%;
+    }
+    
+    .jogo img{
+        width: 100%;
+        height: auto;
+    }
+
+    .page h1{
+        font-size: 25px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .intro{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .info p{
+        height: auto;
+    }
+
+    .box{
+        width: auto;
+    }
+
+    .container{
+        gap: 20px;
+    }
+}
